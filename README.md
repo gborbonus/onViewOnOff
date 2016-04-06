@@ -2,7 +2,7 @@
 
 A simple library that allows you to add the tags "sah" and "saho" to your elements.
 
-Anytime an element that has these tags is within view, the sah function will run, and when removed from view, the saho function will run.
+Anytime an element that has these tags is within view(scrolled to, or in view already when page loads), the sah function will run, and when removed from view(scrolled out of view), the saho function will run.
 
 saho is not required.
 
