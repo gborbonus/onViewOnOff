@@ -8,7 +8,9 @@ function scroll_animation_handler(){
    for(i=0;i<elems.length;i++){
       t=elems[i];
       func=t.getAttribute('sah');
-      if(bottem_leftInViewport(t)){
+      check_func='bottom_leftInViewport';
+      if(t.getAttribute('sahop') == "anything")check_func = 'anypartelementInViewport';
+      if(window[check_func](t)){
         if(!t.getAttribute('sahst')){  
             t.setAttribute('sahst',1);
         
@@ -70,7 +72,7 @@ function elementInViewport(el) {
   );
 }
 
-function bottem_leftInViewport(el){
+function bottom_leftInViewport(el){
   var top = el.offsetTop;
   var left = el.offsetLeft;
   var width = el.offsetWidth;
